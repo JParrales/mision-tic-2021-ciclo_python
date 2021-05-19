@@ -1,0 +1,10 @@
+1. Saber que libro se desea adquirir.
+2. verifico si se tiene el dinero.
+3. abro la puerta de la casa.
+4. cierro la puerta de la casa.
+.
+.
+.
+n -2.desplazo a una libreria.
+n - 1. Pregunto si tienen el libro.
+n. 

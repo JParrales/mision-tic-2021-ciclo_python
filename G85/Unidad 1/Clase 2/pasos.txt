@@ -1,0 +1,18 @@
+Hay un problema!! o necesidad.
+
+-3 preguntas: quien, el donde, que.
+
+-investiga
+-estructura un concepto
+-plantean una idea
+- se hace un boceto:
+        -DISEÑA EN PC
+        -D
+-Materializa.
+
+Desarrollar un algoritmo que nos permita adquirir el libro “El Coronel
+no tiene quien le escriba” de Gabriel García Márquez.
+
+1. ubicar una  libreria mas cercana que este abierta abierta y que tenga libro.?
+2. dirigirse a la libreria
+3. abierta o cerrada?

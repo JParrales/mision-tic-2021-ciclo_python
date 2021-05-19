@@ -1,0 +1,12 @@
+#Algoritmo Libro
+
+Inicio
+    1. Saber cual es el Libro.
+    2. Ir a una libreria
+    3. Pregunto por el libro.
+    4. Si lo tienen:
+                    adquirir el libro y terminar
+        Si no lo tieen:
+            ir al paso 2.
+
+fin
