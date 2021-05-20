@@ -34,6 +34,14 @@ def update_student(student_name, update_student_name):
     else:
         print(f'El estudiante {student_name} NO se encuentra en lista')
 
+def search_student(student_name):
+    global students
+
+    if student_name in students:
+        print(f"El estudiante {student_name} se encuentra en lista")
+    else:
+        print(f"El estudiante {student_name} No se encuentra en lista")
+
 
 def print_menu():
     print("--APLICACION CRUD: INSCRIPCION ESTUDIANTES--")
@@ -43,10 +51,17 @@ def print_menu():
     print("[R] - Listar estudiantes")
     print("[U] - Actualizar estudiante")
     print("[D] - Borrar estudiante")
+    print("[S] - Buscar estudiante")
 
 
 def get_student_name():
-    return input('Nombre estudiante: ')
+    
+    student_name = None
+
+    while not student_name:
+        student_name = input('Nombre estudiante: ')
+    
+    return student_name
 
     
 
@@ -74,6 +89,9 @@ if __name__ == '__main__':
         student_name = get_student_name()
         delete_student(student_name)
         list_students()
+    elif command == 'S':
+        student_name = get_student_name()
+        search_student(student_name)
     else:
         print("OPCION INVALIDA")
     
