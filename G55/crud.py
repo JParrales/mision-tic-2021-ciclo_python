@@ -74,3 +74,4 @@ if __name__ == '__main__':
         list_students()
     else:
         print("COMANDO INVALIDO")
+        menu()
