@@ -41,14 +41,13 @@ def list_students():
         ))
 
 
-def update_student(student_name, update_student_name):
+def update_student(student_idx, update_student_data):
     global students
 
-    if student_name in students:
-        idx = students.index(student_name)
-        students[idx] = update_student_name
+    if len(students) -1 >= student_idx:
+        students[student_idx] = update_student_data
     else:
-        print(f"El estudiante {student_name} NO se encuentra en lista")
+        print(f"El estudiante NO se encuentra en lista")
 
 
 def delete_student(student_name):
@@ -123,9 +122,9 @@ if __name__ == '__main__':
             input()
         elif option == 'U':
             list_students()
-            student_name = get_student_name()
-            update_student_name = input('Nuevo Nombre: ')
-            update_student(student_name, update_student_name)
+            student_idx = int(input('Sleccione indice: '))
+            update_student_data= get_student_data()
+            update_student(student_idx, update_student_data)
             list_students()
             input()
         elif option == 'D':
