@@ -24,7 +24,7 @@ def delete_student(student_name):
     global students
 
     if student_name in students:
-        students = students.replace(student_name + ',', '')
+        students.remove(student_name)
     else:
         print(f'El estudiante {student_name} NO se encuentra en lista')
 
@@ -33,8 +33,8 @@ def update_student(student_name, update_student_name):
     global students
 
     if student_name in students:
-        students = students.replace(
-            student_name + ',', update_student_name + ',')
+        idx = students.index(student_name)
+        students[idx] = update_student_name
     else:
         print(f'El estudiante {student_name} NO se encuentra en lista')
 
@@ -57,6 +57,7 @@ def print_menu():
     print("[U] - Actualizar estudiante")
     print("[D] - Borrar estudiante")
     print("[S] - Buscar estudiante")
+    print("[E] - Salir.")
 
 
 def get_student_name():
@@ -70,30 +71,37 @@ def get_student_name():
 
 
 if __name__ == '__main__':
-    print_menu()
 
-    command = input()
-    command = command.upper()
 
-    if command == 'C':
-        student_name = get_student_name()
-        create_student(student_name)
-        list_students()
-    elif command == 'R':
-        list_students()
-    elif command == 'U':
-        list_students()
-        student_name = get_student_name()
-        update_student_name = input('Nuevo Nombre: ')
-        update_student(student_name, update_student_name)
-        list_students()
-    elif command == 'D':
-        list_students()
-        student_name = get_student_name()
-        delete_student(student_name)
-        list_students()
-    elif command == 'S':
-        student_name = get_student_name()
-        search_student(student_name)
-    else:
-        print("OPCION INVALIDA")
+    mainlopp = True
+
+    while mainlopp:
+        print_menu()
+
+        command = input()
+        command = command.upper()
+
+        if command == 'C':
+            student_name = get_student_name()
+            create_student(student_name)
+            list_students()
+        elif command == 'R':
+            list_students()
+        elif command == 'U':
+            list_students()
+            student_name = get_student_name()
+            update_student_name = input('Nuevo Nombre: ')
+            update_student(student_name, update_student_name)
+            list_students()
+        elif command == 'D':
+            list_students()
+            student_name = get_student_name()
+            delete_student(student_name)
+            list_students()
+        elif command == 'S':
+            student_name = get_student_name()
+            search_student(student_name)
+        elif command == 'E':
+            mainlopp = False
+        else:
+            print("OPCION INVALIDA")
