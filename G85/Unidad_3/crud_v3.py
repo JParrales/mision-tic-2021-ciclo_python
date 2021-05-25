@@ -39,31 +39,31 @@ def list_students():
         ))
 
 
-def delete_student(student_name):
-    global students
+def delete_student(student_idx):
 
-    if student_name in students:
-        students.remove(student_name)
+    if len(students) - 1 >= student_idx:
+        print('Los datos eliminados son: ')
+        print(students.pop(student_idx))
+        input()
     else:
-        print(f'El estudiante {student_name} NO se encuentra en lista')
+        print(f'El id:{student_idx} NO se encuentra en lista')
 
 
 def update_student(student_idx, update_student_data):
     global students
 
-    if len(students) - 1 <= student_idx:
+    if len(students) - 1 >= student_idx:
         students[student_idx] = update_student_data
     else:
-        print(f'El id NO se encuentra en lista')
+        print(f'El id:{student_idx} NO se encuentra en lista')
 
 
-def search_student(student_name):
-    global students
+def search_student(student_idx):
 
-    if student_name in students:
-        print(f"El estudiante {student_name} se encuentra en lista")
+    if len (students) - 1 >= student_idx:
+        print(students[student_idx])
     else:
-        print(f"El estudiante {student_name} No se encuentra en lista")
+        print(f'El id:{student_idx} NO se encuentra en lista')
 
 
 def print_menu():
@@ -123,12 +123,12 @@ if __name__ == '__main__':
             list_students()
         elif command == 'D':
             list_students()
-            student_name = get_student_name()
-            delete_student(student_name)
+            student_idx = int(input('Seleccione usuario: '))
+            delete_student(student_idx)
             list_students()
         elif command == 'S':
-            student_name = get_student_name()
-            search_student(student_name)
+            student_idx = int(input('Seleccione usuario: '))
+            search_student(student_idx)
         elif command == 'E':
             mainlopp = False
         else:
