@@ -50,25 +50,22 @@ def update_student(student_idx, update_student_data):
         print(f"El estudiante NO se encuentra en lista")
 
 
-def delete_student(student_name):
+def delete_student(student_idx):
     global students
 
-    if student_name in students:
-        students.remove(student_name)
+    if len(students) - 1 >= student_idx:
+        print('Los datos eliminados son: ')
+        print(students.pop(student_idx))
     else:
-        print(f"El estudiante {student_name} NO se encuentra en lista")
+        print(f"Indice fuera de lista")
 
 
-def search_student(student_name):
-    #students_list = students.split(',')
-    global students
+def search_student(student_idx):
 
-    for student in students:
-
-        if student != student_name:
-            continue
-        else:
-            return True
+    if len(students) -1 >= student_idx:
+        return students[student_idx]
+    else:
+        return f"INDICE {student_idx} FUERA DE RANGO"
 
 
 def menu():
@@ -122,27 +119,25 @@ if __name__ == '__main__':
             input()
         elif option == 'U':
             list_students()
-            student_idx = int(input('Sleccione indice: '))
+            student_idx = int(input('Seleccione indice: '))
             update_student_data= get_student_data()
             update_student(student_idx, update_student_data)
             list_students()
             input()
         elif option == 'D':
             list_students()
-            student_name = get_student_name()
-            delete_student(student_name)
+            student_idx = int(input('Seleccione indice: '))
+            delete_student(student_idx)
             list_students()
             input()
         elif option == 'E':
             mainloop = False
         elif option == 'S':
-            student_name = get_student_name()
-            student = search_student(student_name)
-            if student:
-                print(f"El estudiante {student_name} SE encuentra en lista")
-            else:
-                print(f"El estudiante {student_name} NO se encuentra en lista")
-            input()
+            student_idx = int(input('Seleccione indice: '))
+            student = search_student(student_idx)
+            print(f"Estos son los datos del estidiante:")
+            print(student)
+
         else:
             print('OPCION INVALIDA')
             input()
