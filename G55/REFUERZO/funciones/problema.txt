@@ -1,3 +1,7 @@
 Escribe un programa que solicite al usuario
-que introduzca una expresión y muestre por pantalla 
+que introduzca una expresión y muestre por pantalla
 el resultado de resolver dicha expresión.
+
+
+3+4+6+7
+3-2-8+
