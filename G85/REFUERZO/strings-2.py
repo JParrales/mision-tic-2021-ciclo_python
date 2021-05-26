@@ -35,6 +35,19 @@ print(telefono2, ':', formato2)
 print(telefono3, ':', formato3)
 
 
+numero = '+34-123456789-53'
+
+
+#FUNCION ANDRES.
+def numero_fijo(number: str):
+    index_1 = int(number.find('-'))
+    #index_1 = number.index('-')
+    index_2 = int(number.find('-', index_1+1))
+    numero = number[index_1 + 1 : index_2]
+    return numero
+
+print(numero_fijo(numero)) 
+
 
 
 
