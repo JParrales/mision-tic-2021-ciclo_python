@@ -9,7 +9,7 @@ una con todas las letras minúsculas, otra con todas las letras mayúsculas
 y otra solo con la primera letra del nombre y de los apellidos en mayúscula. 
 El usuario puede introducir su nombre combinando mayúsculas y minúsculas como quiera. 
 """
-nombre = input('Ingrese su nombre: ')
+#nombre = input('Ingrese su nombre: ')
 
 def nombre_por_3(nombre_completo):
     minusculas = nombre_completo.lower()
@@ -21,10 +21,10 @@ def nombre_por_3(nombre_completo):
     print(primera_letra)
 
 
-nombre_por_3(nombre)
-   # nombre_completo = nombre
-print()
-#nombre_por_3('MIguel ferNANDO gonzalez')
+# nombre_por_3(nombre)
+#    # nombre_completo = nombre
+# print()
+nombre_por_3('MIguel ferNANDO gonzalez')
     #nombre_completo = 'MIguel ferNANDO gonzalez'
-
+# nombre_por_3(12)
 
