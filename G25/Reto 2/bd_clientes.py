@@ -12,7 +12,7 @@ def bd_clientes():
         42140704: {
             'nombre': 'MARGE',
             'apellido': 'SIMPSON',
-            'direccion': 'avenida siempreviva 742',
+            'direccion': 'siempreviva',
             'telefono': 46637600,
             'membresia': True
         },
