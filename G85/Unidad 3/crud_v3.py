@@ -12,8 +12,7 @@ students = [
         'apellido': 'soto',
         'email': 'yisney@mail.me',
         'profesion': 'docente' 
-    }
-]
+    }]
 
 
 def create_student(student):
