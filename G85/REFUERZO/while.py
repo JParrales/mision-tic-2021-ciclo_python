@@ -28,7 +28,6 @@ def conteo():
             print(count)
             break
         
-
         print(count, end=', ')
         count += 2
 
