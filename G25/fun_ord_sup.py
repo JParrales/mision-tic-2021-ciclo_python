@@ -1,9 +1,6 @@
 """ Filter """
 
 
-from typing import Sequence
-
-
 def multiplo_5(numero):
     if numero % 5 == 0:
         return True
@@ -36,14 +33,44 @@ def cuadrado(numero):
 
 
 nums = [i for i in range(1, 6)]
-print(nums)
-cuadrados = [i*i for i in nums]
-print(cuadrados)
-cuadrados_map = list(map(lambda i: i*i, nums))
-print(cuadrados_map)
+# print(nums)
+# cuadrados = [i*i for i in nums]
+# print(cuadrados)
+# cuadrados_map = list(map(lambda i: i*i, nums))
+# print(cuadrados_map)
 
 vocales = ['a', 'e', 'i', 'o', 'u']
 
 vocales_posicion = list(map(lambda v, n: v*n, vocales, nums))
 
-print(vocales_posicion)
+#print(vocales_posicion)
+
+
+""" Reduce """
+
+from functools  import reduce
+
+numeros = list(range(1,5))
+#print(numeros)
+
+def suma(a, b):
+    return a + b
+
+#print(reduce(suma, numeros))
+
+proceso = suma(suma(suma(1,2), 3), 4)
+
+# print(proceso)
+
+# print(reduce(lambda a, b: a + b, numeros))
+
+
+""" zip """
+
+paises = ["china", "india", "USA", "colombia"]
+poblaciones = [1391, 1364, 327, 264]
+
+poblacion_paises = zip(paises, poblaciones)
+print(poblacion_paises)
+
+print(list(poblacion_paises))
