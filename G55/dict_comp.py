@@ -8,6 +8,7 @@ def square():
             numeros[i] = i**2
     
     return numeros
+    
 
 #print(square())
 
@@ -32,5 +33,14 @@ def num_div_5(numeros):
     return div_5
 
 
-print(num_div_5(num_1_to_50))
+#print(num_div_5(num_1_to_50))
 
+cuadrado = {i: i*i for i in range(1, 51) if i % 2 != 0}
+
+#print(cuadrado)
+
+print(cuadrado.items())
+
+num_div_3 = {key: value for key, value in cuadrado.items() if key % 3 == 0}
+
+#print(num_div_3)
