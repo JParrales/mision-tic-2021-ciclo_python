@@ -82,12 +82,34 @@ DATA = [
 ]
 
 
-if __name__ ==  '__main__':
-    
+if __name__ == '__main__':
 
-    #print(DATA[0])
+    # print(DATA[0])
     # print(DATA[4])
     # print(DATA[4]["age"])
 
     """ 1- Crear una lista de los pesonajes."""
+
+    protagonistas = [personaje["name"] for personaje in DATA]
+    protagonista_hombre = [personaje["name"]
+                           for personaje in DATA if personaje["gender"] == 'male']
+
+    # print(protagonistas)
+    # print(protagonista_hombre)
+
+    personajes_jovenes = list(
+        filter(lambda personaje: personaje["age"] < 30, DATA))
+    personajes_jovenes_nombre = list(
+        map(lambda personajes: personajes["name"], personajes_jovenes))
+
+    edad_jovenes = list(map(lambda personaje: personaje["age"], personajes_jovenes))
+
+    datos_jovenes = list(zip(personajes_jovenes_nombre, edad_jovenes))
+
+
+    #print(datos_jovenes)
+
+    for nombre, edad in zip(personajes_jovenes_nombre, edad_jovenes):
+        print("{}: tiene {} años.".format(nombre, edad))
+    
 
