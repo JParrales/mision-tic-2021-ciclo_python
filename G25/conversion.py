@@ -62,6 +62,27 @@ vocales_cad = dict(zip(range(len(cadena)), cadena))
 vocales_list = dict(zip(range(len(lista)), lista))
 vocales_tupla = dict(zip(range(len(tupla)), tupla))
 
-print(vocales_cad)
-print(vocales_list)
-print(vocales_tupla)
+# print(vocales_cad)
+# print(vocales_list)
+# print(vocales_tupla)
+
+vocales = {0: 'a', 1: 'e', 2: 'i', 3: 'o', 4: 'u'}
+
+dict_to_string = "".join(vocales.values())
+print(dict_to_string)
+
+tupla_llaves = tuple(vocales.keys())
+tupla_valores = tuple(vocales.values())
+tupla_items = tuple(vocales.items())
+# print(tupla_llaves)
+# print(tupla_valores)
+# print(tupla_items)
+
+lista_llaves = list(vocales.keys())
+lista_valores = list(vocales.values())
+lista_items = list(vocales.items())
+
+print(lista_llaves)
+print(lista_valores)
+print(lista_items)
+
