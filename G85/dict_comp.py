@@ -28,9 +28,17 @@ ejercicio = {
 divisores = {}
 
 for i in range(1, 11):
+
+    divisores[i] = {}
     
     for x in range(1, i + 1):
-        if x % i == 0:
-            divisores[i] = divisores[i].update({x: x**2})
+        if i % x == 0:
+            divisores[i].update({x: x**2})
 
 print(divisores)
+
+multiplos = {i:{x: x**2 for x in range(1, i + 1) if i % x == 0} for i in range(1, 11)}
+
+#multiplos_2 = {i:{x:x**2 for x in range(1, i + 1) if i % x == 0} for i in range(1, 11)}
+
+print(multiplos)
