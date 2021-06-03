@@ -82,7 +82,21 @@ lista_llaves = list(vocales.keys())
 lista_valores = list(vocales.values())
 lista_items = list(vocales.items())
 
-print(lista_llaves)
-print(lista_valores)
-print(lista_items)
+# print(lista_llaves)
+# print(lista_valores)
+# print(lista_items)
 
+
+conjunto = set('aeiou')
+#print(conjunto)
+
+dict_conjunto = dict(zip(range(len(conjunto)), conjunto))
+print(dict_conjunto)
+
+set_llaves = set(vocales.keys())
+set_valores = set(vocales.values())
+set_items = set(vocales.items())
+
+print(set_items)
+print(set_llaves)
+print(set_valores)

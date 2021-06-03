@@ -32,15 +32,51 @@ def cuadrado(numero):
 
 
 nums = tuple(range(1, 6))
-print(nums)
+#print(nums)
 
 cuadrados = list(map(cuadrado, nums))
-print(cuadrados)
+#print(cuadrados)
 
 cuadrados_map = tuple(map(lambda i: i*i, nums))
-print(cuadrados_map)
+#print(cuadrados_map)
 
 vocales = ['a', 'e', 'i', 'o', 'u']
 
 vocales_mult = list(map(lambda v, n: v*n, vocales, nums))
-print(vocales_mult)
+#print(vocales_mult)
+
+
+""" Reduce """
+
+from functools import reduce
+
+
+numeros = list(range(1,5))
+print(numeros)
+
+def suma(a, b):
+    return a + b
+
+# print(reduce(suma, numeros))
+
+
+# proceso = suma(suma(suma(1, 2), 3), 4)
+# print(proceso)
+
+#print(reduce(lambda a, b: a + b, numeros, 3))
+
+programas = ['python', 'javascript', 'ruby', 'rust', 'java']
+
+resultado = reduce(lambda a, b: a + '-' + b, programas, 'Programas: ')
+#print(resultado)
+
+
+""" ZIP """
+
+paises = ["china", "india", "USA", "Colombia"]
+covid = [1391, 1364, 327, 264]
+
+covid_paises = zip(paises, covid)
+
+print(covid_paises)
+print(dict(covid_paises))
