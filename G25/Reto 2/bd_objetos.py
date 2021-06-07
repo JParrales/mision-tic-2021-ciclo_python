@@ -28,9 +28,9 @@ def bd_objetos():
             'material': 'oro y titanio',
             'peso kg': 200,
             'sistema': 'JARVIS',
-            'disponible': True
+            'disponible': False
         },
-        'Veronica': {
+        'Veronica I': {
             'color': 'Rojo Y Oro',
             'material': 'acero, hierro y niquel',
             'peso kg': 975,
@@ -40,4 +40,3 @@ def bd_objetos():
     }
 
     return objetos
-    
