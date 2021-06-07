@@ -3,35 +3,35 @@ def bd_objetos():
     objetos = {
 
         'Mark I': {
-            'color': 'gris',
+            'color': 'Gris',
             'material': 'metal',
             'peso kg': 360,
             'sistema': 'MS-DOS',
             'disponible': False
         },
         'Mark II': {
-            'color': 'gris',
+            'color': 'Gris',
             'material': 'metal',
             'peso kg': 280,
             'sistema': 'JARVIS',
             'disponible': True
         },
         'Mark III': {
-            'color': 'rojo y oro',
+            'color': 'Rojo Y Oro',
             'material': 'oro y titanio',
             'peso kg': 280,
             'sistema': 'JARVIS',
             'disponible': True
         },
         'Mark VII': {
-            'color': 'rojo y oro',
+            'color': 'Rojo Y Oro',
             'material': 'oro y titanio',
             'peso kg': 200,
             'sistema': 'JARVIS',
             'disponible': True
         },
         'Veronica': {
-            'color': 'rojo y oro',
+            'color': 'Rojo Y Oro',
             'material': 'acero, hierro y niquel',
             'peso kg': 975,
             'sistema': 'JARVIS',
@@ -40,3 +40,4 @@ def bd_objetos():
     }
 
     return objetos
+    
