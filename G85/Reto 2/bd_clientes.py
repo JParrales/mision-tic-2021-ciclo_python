@@ -40,5 +40,3 @@ def bd_clientes():
     }
 
     return clientes
-
-clientes = bd_clientes()
