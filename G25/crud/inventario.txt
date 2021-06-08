@@ -1,0 +1,5 @@
+camara
+fuente
+luces
+cables
+conectores

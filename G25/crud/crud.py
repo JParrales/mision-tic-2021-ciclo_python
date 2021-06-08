@@ -3,10 +3,11 @@
 #Update - actualizar
 #Delete - borrar
 
-inventario = ['camara', 'fuente', 'filtros', 'cables', 'conectores']
+
 
 def create():
     inventario.append(input('Elemento a agregar: '))
+    write()
 
 def read():
     print(inventario)
@@ -16,9 +17,11 @@ def update():
     nuevo_elemento = input('Nuevo elemento: ')
     idx = inventario.index(elemento)
     inventario[idx] = nuevo_elemento
+    write()
 
 def delete():
     inventario.remove(input('Elemento a eliminar: '))
+    write()
     
 
 def menu():
@@ -31,10 +34,24 @@ def menu():
     print("[D] - Borrar")
     print("[E] - Salir.")
 
+def write():
+    file = open('inventario.txt', 'w', encoding='utf-8')
+    for objeto in inventario:
+        file.write(objeto)
+        file.write('\n')
+
+def data_inventario():
+    datos = []
+    file = open('inventario.txt', 'r', encoding='utf-8')
+    for objeto in file:
+        datos.append(objeto[:-1])
+    
+    return datos
+
 
 if __name__ == '__main__':
 
-
+    inventario = data_inventario()
     mainloop = True
 
     while mainloop:
