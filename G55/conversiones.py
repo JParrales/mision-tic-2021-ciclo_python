@@ -115,6 +115,21 @@ tupla_valores = tuple(vocales.values())
 tupla_llaves = tuple(vocales.keys())
 tupla_items = tuple(vocales.items())
 
-print(tupla_valores)
-print(tupla_llaves)
-print(tupla_items)
+# print(tupla_valores)
+# print(tupla_llaves)
+# print(tupla_items)
+
+
+conjunto = set('aeiou')
+print(conjunto)
+
+dict_conjunto = dict(zip(range(len(conjunto)), conjunto))
+print(dict_conjunto)
+
+set_valores = set(vocales.values())
+set_llaves = set(vocales.keys())
+set_items = set(vocales.items())
+
+print(set_items)
+print(set_valores)
+print(set_llaves)
