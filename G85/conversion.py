@@ -91,3 +91,24 @@ lista_items = vocales.items()
 # print(lista_llaves)
 # print(lista_valores)
 # print(lista_items)
+
+
+# conjunto = set('aeiou')
+# print(conjunto)
+
+# dict_conjunto = dict(zip(range(len(conjunto)), conjunto))
+# print(dict_conjunto)
+
+cadena = 'aeiou'
+lista = ['a', 'e', 'i', 'o', 'u']
+tupla = ('a', 'e', 'i', 'o', 'u')
+
+# conjunto = set(tupla)
+# print(conjunto)
+
+# conjunto = {'e', 'i', 'o', 'u', 'a'}
+# print(tuple(conjunto))
+
+conjunto = {'e', 'u', 'i', 'o', 'a'}
+cadena = ''.join(conjunto)
+print(cadena)
