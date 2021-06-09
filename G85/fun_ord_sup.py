@@ -79,4 +79,4 @@ covid = [1391, 1364, 327, 264]
 covid_paises = zip(paises, covid)
 
 print(covid_paises)
-print(dict(covid_paises))
+print(list(covid_paises))
