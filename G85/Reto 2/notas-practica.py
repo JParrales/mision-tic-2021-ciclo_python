@@ -13,7 +13,25 @@ objetos = {
 
 # print('Mark I' in objetos)
 
-nombre = "Daniel"
-apellido = "Vesga"
+# nombre = "Daniel"
+# apellido = "Vesga"
 
-print(nombre + apellido)
+# print(nombre + apellido)
+
+
+name = "Jose Parrales" 
+sep = name.index(' ')
+name = name[:sep]
+surname = name[sep +1: ]
+
+print(name)
+print(surname)
+
+
+nombre = 'Jose PArraLES'
+sep = nombre.index(' ')
+name = nombre[:sep]
+last_name = nombre[sep +1: ]
+
+print(name)
+print(last_name) 
