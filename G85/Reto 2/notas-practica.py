@@ -9,6 +9,11 @@ objetos = {
     }
 }
 
-print(objetos['Mark I'])
+# print(objetos['Mark I'])
 
-print('Mark I' in objetos)
+# print('Mark I' in objetos)
+
+nombre = "Daniel"
+apellido = "Vesga"
+
+print(nombre + apellido)

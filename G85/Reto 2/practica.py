@@ -65,11 +65,15 @@ def reto_2(nombre: str, color: str, material: str, peso: int, sistema: str, disp
         
     info = {}
 
+    sep_idx = nombre.index(' ')
+    nombre = nombre[:sep_idx].capitalize() + nombre[sep_idx:].upper()
+
+
     info[nombre] = {
-        'color': color,
-        'material': material,
-        'peso kg': peso,
-        'sistema': sistema,
+        'color': color.title(),
+        'material': material.lower(),
+        'peso kg': int(peso),
+        'sistema': sistema.upper(),
         'disponible': disponible
     }
 
@@ -89,9 +93,10 @@ def reto_2(nombre: str, color: str, material: str, peso: int, sistema: str, disp
 
 
 
+objetos = bd_objetos()
+print(reto_2('mark Vii', 'rojo y ORO', 'ORO Y TITANIO', '200', 'jarvis', True, objetos))
+print(objetos.get('Mark VII', 'Objeto no se encuentra en BD.'))
 
-        
-        
-        
-# objetos = bd_objetos()
-# print(reto_2('mark Vii', 'rojo y ORO', 'ORO Y TITANIO', 200, 'jarvis', True, objetos))
+# Respuesta:
+# Objeto Mark VII, actualizado en la base de datos
+# {'color': 'Rojo Y Oro', 'material': 'oro y titanio', 'peso kg': 200, 'sistema': 'JARVIS', 'disponible': True}

@@ -112,3 +112,6 @@ tupla = ('a', 'e', 'i', 'o', 'u')
 conjunto = {'e', 'u', 'i', 'o', 'a'}
 cadena = ''.join(conjunto)
 print(cadena)
+
+
+sep
