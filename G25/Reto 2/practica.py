@@ -4,9 +4,11 @@ esto se realizará a través de un diccionario.
 - Verificar si el cliente ingresado se encuentra en la base de datos.
 f"El cliente {cliente} Se encuentra en la base de datos"
 - Si un cliente se encuentra en la base de datos y sus datos de contacto y/o membresía no
-coinciden, debe actualizar los datos. f"Cliente {cliente}, actualizado en la base de datos"
+coinciden, debe actualizar los datos. 
+f"Cliente {cliente}, actualizado en la base de datos"
 - El cliente será identificado con un numero entero, si el tipo de dato no coincide debe solicitar
-un id valido. f"Ingrese un id de tipo valido."
+un id valido. 
+f"Ingrese un id de tipo valido."
 - Si el cliente no se encuentra en la base de datos, actualizarla.
 f"El cliente {cliente} se agregó a la base de datos."
 """
@@ -53,3 +55,5 @@ def bd_clientes():
     }
 
     return clientes
+
+def reto_2(cliente: int, nombre: str, direccion: str, telefono: int, miembro: bool, bd_clientes: dict) -> dict:
