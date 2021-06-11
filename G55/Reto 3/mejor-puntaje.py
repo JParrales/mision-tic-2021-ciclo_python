@@ -31,5 +31,5 @@ def mejor_puntaje(diccionario):
 estudiantes = {'Alex': 12, 'Arlyn': 20, 'Heynar': 15, 'Robinson': 16, 'Luis': 10}
 
 #print(mejor_puntaje(estudiantes))
-print(mejor_puntaje(None))
+print(mejor_puntaje({}))
 
