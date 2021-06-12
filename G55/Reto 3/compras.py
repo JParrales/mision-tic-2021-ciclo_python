@@ -22,18 +22,34 @@ diccionario_vacio = {
     
 }
 
+# def compras(diccionario: dict) -> str:
+
+#     if diccionario:
+#         valores = list(diccionario.values())
+#         mayor = max(valores)
+#         llaves = []
+
+#         for key, value in diccionario.items():
+
+#             if value == mayor:
+#                 llaves.append(key)
+        
+#         return ', '.join(llaves)
+    
+#     else:
+#         return "No hay productos comprados"
 
 def compras(diccionario: dict) -> str:
 
     if diccionario:
         valores = list(diccionario.values())
         mayor = max(valores)
-        llaves = []
+        llaves = [k for k in diccionario if diccionario[k] == mayor]
 
-        for key, value in diccionario.items():
+        # for key, value in diccionario.items():
 
-            if value == mayor:
-                llaves.append(key)
+        #     if value == mayor:
+        #         llaves.append(key)
         
         return ', '.join(llaves)
     
