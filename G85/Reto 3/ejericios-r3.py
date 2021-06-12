@@ -2,19 +2,19 @@
 -llevar el control de compras en el supermacado.
 construir funicion q reciba en un diccionario 
 el producto y su valor , de las compras realizadas.
-Retornar el nombre del porducto mayor valor
+Retornar el STIRNG del nombre del porducto de mayor valor
 o los nombres de los productos mas cosotosos,
 si no he comprado retornar "No hay productos comprados"
 
 """
 
 productos = {
-    "cereal": 7000,
-    "bananas": 5000,
+    "cereal": 3000,
+    "bananas": 6000,
     "huevos 12na": 1800,
-    "aceite": 15000,
-    "pescado": 16000,
-    "pizza": 16001
+    "aceite": 5000,
+    "pescado": 6000,
+    "pizza": 6000
 }
 alacena = {
 
@@ -34,7 +34,7 @@ def compras(diccionario: dict) -> str:
             if max_v == value:
                 llaves.append(key)
         
-        return llaves
+        return ', '.join(llaves)
     
     return "No hay productos comprados"
 
@@ -42,7 +42,7 @@ def compras(diccionario: dict) -> str:
 compra = compras(productos)
 print(compras(productos))
 
-print(compras(alacena))
+#print(compras(alacena))
 
 
 
