@@ -9,7 +9,7 @@ corredores = {
     'Tayson Gray': {
         '100m': 9.73,
         '200m': 19.52,
-        '4x100m': 37.23
+        '4x100m': 42.55
     },
     'Yohan Blake': {
         '100m': 9.73,
@@ -20,16 +20,18 @@ corredores = {
 
 
 """
-lista de listas: los resultados de las pruebas de c/u de los participantes
-Matriz: los resultados de las pruebas
+lista de participantes. *
+lista de listas: los resultados de las pruebas de c/u de los participantes *
+si en el tiempo es mayor a 40 dar un tiempo de 39.9 *
+Matriz: los resultados de las pruebas ( aplicada la condicion)
 Promedios de tiempo en cada prueba
 tiempo total:
-si en el tiempo es mayor a 40 dar un tiempo de 39.9
-lista de participantes. *
+
+
 nombre del ganador
 """
 import numpy as np
-from numpy.lib.function_base import _parse_gufunc_signature
+
 
 participantes = [] #['Usain Bolt', 'Tayson Gray', 'Yohan Blake']
 
@@ -57,4 +59,18 @@ for i in participantes:
     resultados.append(resultados_corredor)
 
 print(resultados)
+
+normalizar = []
+
+for i in resultados:
+
+    normalizados = list(map(lambda valor: 39.9 if valor > 40 else valor, i))
+    normalizar.append(normalizados)
+
+print(normalizar)
+
+matriz = np.array(normalizar)
+print(matriz)
+
+
 
