@@ -43,4 +43,4 @@ print(matriz_25[:, 0], '\n')
 
 #matriz3x3
 print("submatriz")
-print(matriz_25[1:4, 1:4])
+print(matriz_25[1:4, 1:4].shape)
